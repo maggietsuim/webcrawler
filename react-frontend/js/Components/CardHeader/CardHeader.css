@@ -1,0 +1,15 @@
+.CardHeader {
+  height: 150px;
+  width: 100%;
+  padding: 15px;
+  width:100%;
+  background-size:cover;
+  color:#fff;
+  text-align: left;
+}
+
+.CardHeader-Title {
+  text-transform: uppercase;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
