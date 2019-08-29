@@ -10,7 +10,6 @@ app.config['MYSQL_DATABASE_PASSWORD'] = aws_rds.PASSWORD
 app.config['MYSQL_DATABASE_DB'] = aws_rds.DB
 app.config['MYSQL_DATABASE_HOST'] = aws_rds.HOST
 app.config['MYSQL_DATABASE_PORT'] = aws_rds.PORT
-app.config['MYSQL_DATABASE_DB'] = aws_rds.DB
 mysql.init_app(app)
 
 @app.route('/db')
