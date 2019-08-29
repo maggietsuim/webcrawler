@@ -12,7 +12,7 @@ class Card extends Component {
           companyName={this.props.companyName}
           roleName={this.props.roleName}
           locationName={this.props.locationName}
-          text={'Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence. Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence. Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence. Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence. Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence.'}
+          text={this.props.text}
         />
       </article>
     )

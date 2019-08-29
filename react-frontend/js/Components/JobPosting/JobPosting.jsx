@@ -6,11 +6,14 @@ class JobPosting extends Component {
   render() {
     return (
       <div className="JobPosting">
-        <Card 
-          companyName="Stripe" 
-          roleName="Security Software Engineer (Intern)"
-          locationName="San Francisco"
-        />
+        {this.props.details.map((detail) => (
+          <Card 
+            companyName={detail.CompanyName}
+            roleName={detail.Role}
+            locationName={detail.Location}
+            text={detail.Requirements}
+          />
+        ))}
       </div>
     );
   }
