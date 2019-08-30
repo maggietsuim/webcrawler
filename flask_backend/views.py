@@ -17,7 +17,7 @@ def db():
     try:
         conn = mysql.connect()
         cur = conn.cursor(pymysql.cursors.DictCursor)
-        cur.execute("SELECT * FROM SecurityRoles;")
+        cur.execute("SELECT * FROM JobDescriptions;")
         rows = cur.fetchall()
         resp = jsonify(rows)
         resp.status_code = 200

@@ -21,6 +21,7 @@ class App extends Component {
       <div className="App">
         <h1>Hello There</h1>
         <JobPosting details={this.state.roles}/>
+
       </div>
     );
   };

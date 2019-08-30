@@ -16,8 +16,7 @@ class CardBody extends Component {
         </div>
         <h4 className="CardBody-RoleName">{this.props.roleName}</h4>
 
-        {/* TODO: Render a list here */}
-        <p className="CardBody-Content">{this.props.text}</p>
+        <p className="CardBody-Content" dangerouslySetInnerHTML={{__html: this.props.text}}></p>
         
         <CardButton />
       </div>
