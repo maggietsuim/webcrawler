@@ -4,4 +4,7 @@
   margin: 60px auto;
   box-shadow: 10px 5px 40px 20px darken(#341cac, 5%);
   transition: .25s;
+  /* TODO: delete after done debugging */
+  border: 2px black;
+  border-style: solid;
 }

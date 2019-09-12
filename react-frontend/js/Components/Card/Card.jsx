@@ -6,15 +6,19 @@ import CardBody from '../CardBody/CardBody'
 class Card extends Component {
   render() {
     return (
-      <article className="Card">
-        <CardHeader image={'https://source.unsplash.com/user/erondu/600x400'}/>
-        <CardBody 
+      <div className="Card">
+        <CardHeader 
           companyName={this.props.companyName}
-          roleName={this.props.roleName}
-          locationName={this.props.locationName}
-          text={this.props.text}
+          role={this.props.role}
+          location={this.props.location}
+          logoUrl={this.props.logoUrl}
         />
-      </article>
+        <CardBody 
+          linkedinLink={this.props.linkedinLink}
+          companyAppLink={this.props.companyAppLink}
+          description={this.props.description}
+        />
+      </div>
     )
   }
 }

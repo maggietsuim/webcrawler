@@ -1,11 +1,52 @@
 .CardHeader {
-  height: 150px;
   width: 100%;
   padding: 15px;
   width:100%;
   background-size:cover;
-  color:#fff;
+  color:rgb(0, 0, 0);
   text-align: left;
+  border: 2px purple;
+  border-style: solid;
+  display: flex;
+}
+
+.CardHeader-Logo-Frame {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  border: 2px white;
+  border-style: solid;
+}
+
+.CardHeader-Logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+}
+
+.CardHeader-CompanyName {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.CardHeader-Location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.CardHeader-LocationText {
+  margin: 0;
+  padding: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.CardHeader-RoleName {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
 }
 
 .CardHeader-Title {

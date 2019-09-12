@@ -4,37 +4,8 @@
   width:100%;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
-}
-
-.CardBody-CompanyName {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 8px;
-}
-
-.CardBody-Date {
-  font-size: 11px;
-  font-weight: 600;
-  color: grey;
-}
-
-.CardBody-Location {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.CardBody-LocationText {
-  margin: 0;
-  padding: 0;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.CardBody-RoleName {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 8px;
+  border: 2px blue;
+  border-style: solid;
 }
 
 .CardBody-Content {

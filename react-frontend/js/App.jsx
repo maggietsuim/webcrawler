@@ -1,31 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 require('./App.css');
-import JobPosting from './Components/JobPosting/JobPosting'
+import JobPosting from './Components/JobPosting/JobPosting';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {roles: []}
+function useFetch(url) {
+  const [data, setData] = useState([]);
+  async function fetchUrl() {
+    const response = await fetch(url);
+    const json = await response.json();
+    setData(json);
   }
+  useEffect(() => {
+    fetchUrl();
+  }, []);
+  return [data];
+}
 
-  componentDidMount() {
-    fetch('http://127.0.0.1:5000/db')
-    .then(res => res.json())
-    .then((data) => {
-      this.setState({ roles: data })
-    })
-    .catch(console.log)
-  }
-  render() {
-    return (
-      <div className="App">
-        <h1>Hello There</h1>
-        <JobPosting details={this.state.roles}/>
-
-      </div>
-    );
-  };
-
+function App() {
+  const [roles] = useFetch(
+      "http://127.0.0.1:5000/db"
+  );
+  return (
+    <div>
+      {roles.map((role) => (
+        <JobPosting
+          role = {role}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default App;
