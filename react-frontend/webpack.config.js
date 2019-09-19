@@ -29,7 +29,7 @@ const config = {
     },
     plugins: [
         new ExtractTextPlugin('styles.css'),
-    ]
+    ],
 };
 
 module.exports = config;
