@@ -11,16 +11,24 @@ import IconButton from '@material-ui/core/IconButton';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
-import ShareIcon from '@material-ui/icons/Share';
+import ReadMore from '@crossfield/react-read-more';
+import ReadMoreButton from '@crossfield/react-read-more';
 
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 345,
   },
+  content: {
+    fontSize: 12,
+  }
 }));
 
 function JobPosting(props) {
   const classes = useStyles();
+  function replaceHTML(input) {
+    input = input.replace(/<span>|<\/span>|<\/br>|\n|&nbsp;/g, '');
+    return input;
+  }
   return (
     <Card className={classes.card}>
       <CardHeader
@@ -30,11 +38,23 @@ function JobPosting(props) {
           <Avatar aria-label="logo" src={props.role.LogoUrl} />
         }
       />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          <p dangerouslySetInnerHTML={{__html: props.role.Description}} />
-        </Typography>
-      </CardContent>
+      <ReadMore
+        initialHeight={350}
+        readMore={propss =>
+          <ReadMoreButton 
+            onClick={propss.onClick}
+          >
+            {propss.open ? 'Read Less' : 'Read More'}
+          </ReadMoreButton>
+        }
+      >
+        <CardContent>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.content}>
+            <p dangerouslySetInnerHTML={{__html: replaceHTML(props.role.Description)}} />
+          </Typography>
+        </CardContent>
+      </ReadMore>
+
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
