@@ -14,7 +14,9 @@ import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 345,
+    maxWidth: 300,
+    maxHeight: 400,
+    // width: 300,
   },
   content: {
     fontSize: 12,

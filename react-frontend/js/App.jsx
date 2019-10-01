@@ -20,11 +20,17 @@ function App() {
       "http://127.0.0.1:5000/db"
   );
   return (
-    <div>
+    <div 
+      style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+    >
       {roles.map((role) => (
-        <JobPosting
-          role = {role}
-        />
+        <div 
+          style={{ margin: 10 }}
+        >
+          <JobPosting
+            role = {role}
+          />
+        </div>
       ))}
     </div>
   );
