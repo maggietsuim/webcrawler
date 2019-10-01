@@ -1,6 +1,13 @@
 .App {
-  /* text-align: left; */
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+.App-Description {
+  margin: 2;
+  width: 300;
+  height: 300;
 }
 
 .App-logo {
