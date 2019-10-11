@@ -2,6 +2,17 @@
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: row;
+  /* border: black solid 10px; */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-Search {
+  display: flex;
+  flex-direction: column;
+  /* border: black solid 2px; */
+  align-items: center;
 }
 
 .App-Description {
